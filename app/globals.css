@@ -7,9 +7,16 @@
   --foreground: #171717;
 }
 
+span{
+ color:#F1F1F1
+}
+
 @media (prefers-color-scheme: dark) {
+
+
+  
   :root {
-    --background: #0a0a0a;
+    --background: #282828;
     --foreground: #ededed;
   }
 }
@@ -25,3 +32,6 @@ body {
     text-wrap: balance;
   }
 }
+
+
+
