@@ -58,7 +58,24 @@ const getAllDatesInRange = ({ startDate, endDate, daysOfWeek, selectedMonths, in
     return dates;
 }
 
-  
+
+
+if (patternSelected === 'yearly') {
+    for (let currentDate = new Date(start); currentDate <= end; currentDate.setFullYear(currentDate.getFullYear() + 1)) {
+      if (selectedMonths.length > 0) {
+        if (isMatchingMonth(currentDate)) {
+          dates.push(new Date(currentDate));
+        }
+      } else {
+        dates.push(new Date(currentDate));
+      }
+
+      if (interval > 0) {
+        currentDate.setFullYear(currentDate.getFullYear() + interval - 1); // Yearly interval logic
+      }
+    }
+    return dates;
+  }
 };
 
 

@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+React Recurring Date Picker Component
 
-## Getting Started
+This project is a reusable Recurring Date Picker Component built using React and Next.js. The component allows users to select recurring patterns for tasks, such as Daily, Weekly, Monthly, or Yearly, with custom date ranges and task inputs.
 
-First, run the development server:
+The project includes multiple components to handle date selection, task management, and recurring logic, integrated with Tailwind CSS for styling.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Features
+Recurring Date Selection: Choose recurring patterns (Daily, Weekly, Monthly, or Yearly).
+Task Management: Add tasks with custom time and intervals for the selected dates.
+Dynamic Highlighting: Dates with assigned tasks are highlighted.
+Date Range Selection: Define start and end dates for the recurring pattern.
+State Management: Managed using React Context API to ensure data is accessible across components.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Demo
+Here's a walkthrough of the main components and their usage.
 
-## Learn More
+Main Component
+The Main component provides the context for date selection and renders the Calender component, which is the primary user interface for date and task selection.
 
-To learn more about Next.js, take a look at the following resources:
+jsx
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Calender Component
+The Calender component allows users to select dates and assign tasks. It also supports viewing the tasks for highlighted dates.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Task Component
+The Task component allows users to assign tasks, intervals, and specific times for the recurring dates.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Context API
+The Context API (DatePickerProvider) manages the global state for the date picker, including selected dates, task details, and recurring pattern options.
+
+
+
+Built With
+React
+Next.js
+Tailwind CSS
+React Datepicker
+
+
+Folder Structure
+bash
+Copy code
+.
+├── components
+│   ├── Calendar.js
+│   ├── Card.js
+│   ├── Task.js
+│   ├── MyNotes.js
+│   ├── Input.js
+│   └── Pattern.js
+├── context
+│   └── context.js
+├── utils
+│   └── CalculateRecurringDates.js
+└── pages
+    └── index.js
+
+
+
+    Author: Gaurav Kandhalia
+GitHub: https://github.com/gaurav-kandhalia
+LinkedIn: https://www.linkedin.com/in/gaurav-kandhalia-38157331b/
+
+
+
+
+ all is working properly for daily , weekly , monthly ,yearly
+
+user can select date, range between dates,
+
+selected dates should get highlighted according to the inputs given by the user
+
+a calender will show the hightlighted on which when user click it displays the information set according to the date
+
+i have not stored the dates set by the user
+
+website is not responsive 
+
+i have not used any external function 
+
+i have only used react DatePicker for the display of calender 
+
