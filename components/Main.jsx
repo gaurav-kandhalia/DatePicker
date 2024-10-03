@@ -1,20 +1,12 @@
-
-
-
-
+import dynamic from 'next/dynamic';
 import { DatePickerProvider } from '@/context/context';
-import Calender from '@/components/Calender'
 
+const Calendar = dynamic(() => import('./Calendar'), { ssr: false });
 
 export default function Main() {
-
-
   return (
-  <DatePickerProvider>
-    <Calender/>
-   
-  </DatePickerProvider>
-  )
+    <DatePickerProvider>
+      <Calendar /> 
+    </DatePickerProvider>
+  );
 }
-
-
