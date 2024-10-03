@@ -1,12 +1,12 @@
-import dynamic from 'next/dynamic';
-import { DatePickerProvider } from '@/context/context';
 
-const Calendar = dynamic(() => import('./Calendar'), { ssr: false });
+import dynamic from 'next/dynamic';
+import DatePickerWrapper from './DatepickerProvider';
+
+
 
 export default function Main() {
   return (
-    <DatePickerProvider>
-      <Calendar /> 
-    </DatePickerProvider>
+   <DatePickerWrapper/>
+  
   );
 }
